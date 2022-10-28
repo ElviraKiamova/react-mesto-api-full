@@ -1,0 +1,29 @@
+.profile__button-cross {
+  border: 2px solid #ffffff;
+  box-sizing: border-box;
+  border-radius: 2px;
+  background-color: transparent;
+  transition: opacity 0.3s linear;
+  width: 150px;
+  height: 50px;
+  background-image: url(../../../images/cross.svg);
+  background-repeat: no-repeat;
+  background-size: 22px 22px;
+  background-position: center center;
+  padding: 0;
+}
+
+.profile__button-cross:hover {
+  opacity: 0.6;
+  cursor: pointer;
+}
+
+@media (max-width: 950px) {
+  .profile__button-cross {
+    width: 282px;
+    margin-top: 36px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}

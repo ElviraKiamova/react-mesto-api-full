@@ -1,0 +1,8 @@
+.header__button-icon {
+   display: none;
+}
+
+.header__button-icon:hover {
+    opacity: 0.6;
+}
+    

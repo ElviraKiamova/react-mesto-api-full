@@ -1,0 +1,8 @@
+ .header__menu_logout {
+   display: none;
+   
+}
+
+.header__menu_logout:hover {
+    opacity: 0.6;
+}

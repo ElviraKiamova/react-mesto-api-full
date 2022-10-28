@@ -1,0 +1,7 @@
+ .header__menu_email {
+   display: none;
+}
+
+.header__menu_emaill:hover {
+    opacity: 0.6;
+}

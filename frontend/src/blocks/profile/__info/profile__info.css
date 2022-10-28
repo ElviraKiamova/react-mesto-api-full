@@ -1,0 +1,18 @@
+.profile__info {
+  width: 336px;
+  display: grid;
+  gap: 16px 18px;
+  grid-template-columns: minmax(189px, 294px) 24px;
+  grid-template-areas:
+    "title title"
+    "subtitle subtitle";
+}
+
+@media (max-width: 950px) {
+  .profile__info {
+    position: relative;
+    width: 282px;
+    row-gap: 14px;
+    grid-template-columns: 282px;
+  }
+}
