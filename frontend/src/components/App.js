@@ -205,11 +205,9 @@ function App() {
         auth
         .checkToken(jwt)
         .then((res) => {
+          setLoggedIn(true);
           setEmail(res.data.email);
-          if (res) {
-            setLoggedIn(true);
-            history.push("/");
-          }
+          history.push("/");
         })
         .catch((err) => console.log(err));
       },
