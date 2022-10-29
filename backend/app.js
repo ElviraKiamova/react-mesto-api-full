@@ -2,6 +2,7 @@ const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
+const helmet = require('helmet');
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const notFoundController = require('./controllers/notFoundController');
@@ -22,6 +23,14 @@ app.use(bodyParser.urlencoded({
 
 app.use(corsProcessing);
 app.use(requestLogger);
+
+app.use(helmet());
+
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
 
 app.post('/signin', loginValid, login);
 app.post('/signup', registerValid, createUser);
