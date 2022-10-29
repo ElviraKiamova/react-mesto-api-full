@@ -23,6 +23,12 @@ app.use(bodyParser.urlencoded({
 app.use(corsProcessing);
 app.use(requestLogger);
 
+app.get('/crash-test', () => {
+  setTimeout(() => {
+    throw new Error('Сервер сейчас упадёт');
+  }, 0);
+});
+
 app.post('/signin', loginValid, login);
 app.post('/signup', registerValid, createUser);
 
