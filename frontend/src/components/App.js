@@ -56,7 +56,7 @@ function App() {
     api
       .handleUserAvatar(data)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser((user) => ({ ...user, avatar: res.data.avatar }));
         closeAllPopups();
       })
       .catch((err) => {
