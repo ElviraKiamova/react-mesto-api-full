@@ -11,6 +11,7 @@ export const register = ({ password, email }) => {
   return fetch(`${baseUrl}/signup`, {
     method: "POST",
     headers: {
+      "Accept": "application/json",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ password, email }),
@@ -25,7 +26,7 @@ export const authorize = ({email, password}) => {
   return fetch(`${baseUrl}/signin`, {
     method: "POST",
     headers: {
-      Accept: "application/json",
+      "Accept": "application/json",
       "Content-Type": "application/json",
     },
     body: JSON.stringify({ email, password }),
