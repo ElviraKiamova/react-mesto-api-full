@@ -1,0 +1,30 @@
+{
+  "files": {
+    "main.css": "/89373611988/mesto-react.git/static/css/main.9436b010.css",
+    "main.js": "/89373611988/mesto-react.git/static/js/main.c80c25d4.js",
+    "static/js/787.5530211c.chunk.js": "/89373611988/mesto-react.git/static/js/787.5530211c.chunk.js",
+    "static/media/Inter-Medium.woff": "/89373611988/mesto-react.git/static/media/Inter-Medium.9053572c46aeb4b16caa.woff",
+    "static/media/Inter-Black.woff": "/89373611988/mesto-react.git/static/media/Inter-Black.c6938660eec019fefd68.woff",
+    "static/media/Inter-Regular.woff": "/89373611988/mesto-react.git/static/media/Inter-Regular.8c206db99195777c6769.woff",
+    "static/media/Inter-Medium.woff2": "/89373611988/mesto-react.git/static/media/Inter-Medium.293fd13dbca5a3e450ef.woff2",
+    "static/media/Inter-Black.woff2": "/89373611988/mesto-react.git/static/media/Inter-Black.15ca31c0a2a68f76d2d1.woff2",
+    "static/media/Inter-Regular.woff2": "/89373611988/mesto-react.git/static/media/Inter-Regular.c8ba52b05a9ef10f4758.woff2",
+    "static/media/Vector.svg": "/89373611988/mesto-react.git/static/media/Vector.bc3450ffaa676172ae9a1ed3be59d4df.svg",
+    "static/media/heart.svg": "/89373611988/mesto-react.git/static/media/heart.1ad06e85f169668a1f36.svg",
+    "index.html": "/89373611988/mesto-react.git/index.html",
+    "static/media/reject.svg": "/89373611988/mesto-react.git/static/media/reject.d4ce2a261b68c6da973d.svg",
+    "static/media/delete.svg": "/89373611988/mesto-react.git/static/media/delete.ce3b64935accf9b8212e.svg",
+    "static/media/resolve.svg": "/89373611988/mesto-react.git/static/media/resolve.a9eb6caf1da3ff48b215.svg",
+    "static/media/heart-dark.svg": "/89373611988/mesto-react.git/static/media/heart-dark.35948469632d0421d697.svg",
+    "static/media/pen.svg": "/89373611988/mesto-react.git/static/media/pen.6c7bf05444b9793fdf6e.svg",
+    "static/media/Close.svg": "/89373611988/mesto-react.git/static/media/Close.039f1f5203f653b4bacd.svg",
+    "static/media/cross.svg": "/89373611988/mesto-react.git/static/media/cross.bed8c136e13907f5eefb.svg",
+    "main.9436b010.css.map": "/89373611988/mesto-react.git/static/css/main.9436b010.css.map",
+    "main.c80c25d4.js.map": "/89373611988/mesto-react.git/static/js/main.c80c25d4.js.map",
+    "787.5530211c.chunk.js.map": "/89373611988/mesto-react.git/static/js/787.5530211c.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.9436b010.css",
+    "static/js/main.c80c25d4.js"
+  ]
+}
