@@ -1,4 +1,4 @@
-
+import BASE_URL from "./constants";
 
 class Api {
   constructor(url) {
@@ -104,6 +104,6 @@ class Api {
 }
 
 
-const api = new Api('https://mesto.nomoreparties.co/v1/cohort-45');
+const api = new Api(BASE_URL);
 
 export default api;
