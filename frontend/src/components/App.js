@@ -44,7 +44,7 @@ function App() {
     api
       .editProfile(data)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser(res.data);
         closeAllPopups();
       })
       .catch((err) => {
