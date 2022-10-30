@@ -128,13 +128,13 @@ function App() {
     api
       .toggleLike(_id, isLiked)
       .then((res) => {
-        setCards((stateCards) => stateCards.map((c) => c._id === _id ? res.data : c));
+        setCards((stateCards) => stateCards.map((c) => c._id === res._id ? res : c));
       })
       .catch((err) => {
         console.log(err);
       });
   }
-  
+
 
   function handleCardDelete(cardId) {
     api

@@ -43,7 +43,7 @@ module.exports.likeCard = (req, res, next) => {
         next(new ErrorNotFound('Карточка не найдена'));
         return;
       }
-      res.status(200).send({ data: card });
+      res.status(200).send(card);
     })
     .catch((err) => {
       if (err.name === 'CastError') {
