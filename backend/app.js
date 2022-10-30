@@ -1,8 +1,11 @@
+require('dotenv').config();
 const bodyParser = require('body-parser');
 const express = require('express');
 const mongoose = require('mongoose');
 const { errors } = require('celebrate');
 const helmet = require('helmet');
+require('dotenv').config();
+
 const { createUser, login } = require('./controllers/users');
 const auth = require('./middlewares/auth');
 const notFoundController = require('./controllers/notFoundController');
