@@ -69,7 +69,7 @@ function App() {
     api
       .createCardApi(data)
       .then((newCard) => {
-        setCards([newCard.data, ...cards]);
+        setCards([...cards, newCard.data]);
         closeAllPopups();
       })
       .catch((err) => {
@@ -123,12 +123,12 @@ function App() {
     setIsInfoToolTipOpen(false);
   };
 
-  function handleCardLike(id, isLiked) {
+  
+  function handleCardLike(_id, isLiked) {
     api
-      .toggleLike(id, isLiked)
+      .toggleLike(_id, isLiked)
       .then((res) => {
-        console.dir(res);
-        setCards(cards.map((c) => (c._id === isLiked._id ? res.data : c)));
+        setCards((stateCards) => stateCards.map((c) => c._id === _id ? res.data : c));
       })
       .catch((err) => {
         console.log(err);
