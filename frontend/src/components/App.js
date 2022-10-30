@@ -44,7 +44,7 @@ function App() {
     api
       .editProfile(data)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser(res.data);
         closeAllPopups();
       })
       .catch((err) => {
@@ -56,7 +56,7 @@ function App() {
     api
       .handleUserAvatar(data)
       .then((res) => {
-        setCurrentUser(res);
+        setCurrentUser((user) => ({ ...user, avatar: res.data.avatar }));
         closeAllPopups();
       })
       .catch((err) => {
@@ -69,7 +69,7 @@ function App() {
     api
       .createCardApi(data)
       .then((newCard) => {
-        setCards([newCard, ...cards]);
+        setCards([...cards, newCard.data]);
         closeAllPopups();
       })
       .catch((err) => {
@@ -123,16 +123,18 @@ function App() {
     setIsInfoToolTipOpen(false);
   };
 
-  function handleCardLike(id, isLiked) {
+  
+  function handleCardLike(_id, isLiked) {
     api
-      .toggleLike(id, isLiked)
+      .toggleLike(_id, isLiked)
       .then((res) => {
-        setCards(cards.map((card) => (card._id === res._id ? res : card)));
+        setCards((stateCards) => stateCards.map((c) => c._id === res._id ? res : c));
       })
       .catch((err) => {
         console.log(err);
       });
   }
+
 
   function handleCardDelete(cardId) {
     api
@@ -205,11 +207,9 @@ function App() {
         auth
         .checkToken(jwt)
         .then((res) => {
-          setEmail(res.data.email);
-          if (res) {
-            setLoggedIn(true);
-            history.push("/");
-          }
+          setLoggedIn(true);
+          setEmail(res.email);
+          history.push("/");
         })
         .catch((err) => console.log(err));
       },

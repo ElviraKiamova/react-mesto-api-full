@@ -3,10 +3,11 @@
   "version": "1.0.0",
   "scripts": {
     "start": "node app.js",
-    "dev": "nodemon app.js",
+    "dev": "cross-env PORT=5555 nodemon app.js",
     "lint": "npx eslint ."
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "eslint": "^8.24.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.26.0",
