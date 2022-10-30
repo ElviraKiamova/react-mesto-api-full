@@ -127,12 +127,14 @@ function App() {
     api
       .toggleLike(id, isLiked)
       .then((res) => {
-        setCards(cards.map((card) => (card._id === res._id ? res : card)));
+        console.dir(res);
+        setCards(cards.map((c) => (c._id === isLiked._id ? res.data : c)));
       })
       .catch((err) => {
         console.log(err);
       });
   }
+  
 
   function handleCardDelete(cardId) {
     api
@@ -206,7 +208,7 @@ function App() {
         .checkToken(jwt)
         .then((res) => {
           setLoggedIn(true);
-          setEmail(res.data.email);
+          setEmail(res.email);
           history.push("/");
         })
         .catch((err) => console.log(err));

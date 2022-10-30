@@ -98,8 +98,8 @@ class Api {
 
 
   // Отображение количества лайков карточки
-  toggleLike(id, isLiked) {
-    return fetch(`${this._url}/cards/${id}/likes`, {
+  toggleLike(cardId, isLiked) {
+    return fetch(`${this._url}/cards/${cardId}/likes`, {
       method: isLiked ? "DELETE" : "PUT",
       headers: {
         authorization: `Bearer ${localStorage.getItem('jwt')}`,
@@ -108,8 +108,6 @@ class Api {
     })
     .then(this._checkResponse);
   }
-
-
 
     //Удаление карточки
     deleteCard(cardId) {
