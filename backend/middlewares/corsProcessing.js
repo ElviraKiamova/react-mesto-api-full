@@ -5,7 +5,8 @@ const allowedCors = [
   'http://api.movement.nomoredomains.icu',
   'http://localhost:5555',
   'http://localhost:7777',
-  'https://127.0.0.1::7777',
+  'http://localhost:3000',
+  'https://127.0.0.1::3000',
 ];
 
 module.exports = (req, res, next) => {
